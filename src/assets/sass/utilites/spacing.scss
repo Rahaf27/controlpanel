@@ -9,7 +9,7 @@ $spacing-data: (
 
 
 @function spacing($variant: base){
-    $fetched-value: map-get($space-data, $variant);
+    $fetched-value: map-get($spacing-data, $variant);
 
     @if type-of($fetched-value) == number {
         @return $fetched-value;
