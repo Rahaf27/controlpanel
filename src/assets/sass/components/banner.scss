@@ -4,15 +4,15 @@ $color-banner-lighter: #e0f5f5;
 $color-banner-dark: #00848e;
 $icon-size: 32px;
 
-.c-banner {
+.c-banner{
     @include e-card;
     background-color: $color-banner-lighter;
     border-top: 3px solid $color-banner-dark;
     padding: spacing("small") spacing("extra-wide");
-    position: relative;
+    position: relative
 }
 
-.c-banner__title {
+.c-banner__title{
     color: $color-title-subdued;
     font-weight: normal;
 }
@@ -28,24 +28,24 @@ $icon-size: 32px;
 
 .c-banner__close,
 .c-banner__icon {
-    position: absolute;
-    top: spacing("small");
+  position: absolute;
+  top: spacing("small");
 }
 
 .c-banner__close {
-    left: spacing("small");
-    cursor: pointer;
+   left: spacing("normal");
+   cursor: pointer;
 }
 
 .c-banner__icon {
-    right: spacing("small");
-    color: $color-banner-dark;
-    background: $color-banner-light;
-    border-radius: 50%;
-    width: $icon-size;
-    height: $icon-size;
-    line-height: $icon-size !important;
-    text-align: center;
+  right: spacing("normal");
+  color: $color-banner-dark;
+  background: $color-banner-light;
+  border-radius: 50%;
+  width: $icon-size;
+  height: $icon-size;
+  line-height: $icon-size!important;
+  text-align: center;
 }
 
 .c-banner > * {
@@ -65,4 +65,24 @@ $icon-size: 32px;
     transform-origin: 50% 0;
 }
 
+//responsive
 
+@media (max-width: $bp-phone-normal) {
+    .c-banner {
+        padding-left: spacing("small");
+        padding-right: spacing("small");
+    }
+
+    .c-banner__icon {
+        right: spacing("small");
+    }
+
+    .c-banner__close {
+        left: spacing("small");
+    }
+
+    .c-banner__title {
+        margin-left: spacing("normal");
+        margin-right: $icon-size + spacing("extra-small");
+    }
+}

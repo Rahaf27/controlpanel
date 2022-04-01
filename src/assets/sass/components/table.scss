@@ -11,10 +11,10 @@ $bp-table-column: 660px;
     align-items: baseline;
     margin-bottom: spacing("small");
     padding: 0 spacing("normal");
+    flex-wrap: wrap;
 }
 
 .c-table__navigation {
-    margin-right: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;

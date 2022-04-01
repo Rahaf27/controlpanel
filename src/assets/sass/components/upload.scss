@@ -1,12 +1,12 @@
+$upload-size: 400px;
 .c-upload {
     @include e-card;
-    min-width: 400px;
-    min-height: 400px;
+    min-width: $upload-size;
+    min-height: $upload-size;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: spacing("normal") spacing("normal") spacing("wide");
-    margin: auto;
 }
 
 .c-upload__header {
@@ -44,7 +44,7 @@
     background-size: 150px;
     margin-bottom: spacing("small");
 
-    img {
+    img{
         max-width: 100%;
         height: auto;
         display: inline;
@@ -68,7 +68,7 @@
     font-size: 14px;
 }
 
-//  small upload
+// small upload
 .c-upload--small {
     min-width: initial;
     min-height: initial;
@@ -92,7 +92,7 @@
     }
 }
 
-//state 
+// state
 .has-image.c-upload {
     .c-upload__label--remove {
         display: block;
@@ -102,6 +102,14 @@
         img {
             display: block;
         }
+    }
+}
+
+//responsive
+@media (max-width: $upload-size) {
+    .c-upload {
+        min-width: initial;
+        width: 100%;
     }
 }
 
